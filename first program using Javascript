@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="first.css"> -->
+    </head>
+    <body>
+        <div class="main">
+            <div class="editing">
+                <form action="">
+                    <fieldset>
+                        <legend style="text-align: center;"><h1>Editing Section</h1></legend>
+                        <fieldset id="info">
+                            <legend><h3>Student Information</h3></legend>
+                            <h3>👤 Name : <input type="text" name="Student" id="stud" placeholder="Enter your name" required></h3>
+                            <br>
+                            <h3>🆔 USN Number : <input type="text" name="usn" id="usn" placeholder="Enter your USN" required></h3>
+                            <br>
+                            <h3>🏫 Class :  <input type="text" name="text" id="text" placeholder="Enter Your class " required></h3>
+                            <br>
+                            <h3>📆 Semester :  <input type="text" name="text" id="text" placeholder="Enter Your Section" required></h3>
+                            <br>
+                            <h3 >🎓 Course :
+                                <select name="cou" id="cour">
+                                    <option value="CSE">----Select Your Course ----</option>
+                                    <option value="CSE">Computer Science Engineering</option>
+                                    <option value="AI&ML">Artificial Intelligence And Machine Learning</option>
+                                    <option value="RO&AI">Robotic And Artificial Intelligence</option>
+                                    <option value="CV">Civil Engineering</option>
+                                    <option value="CE">Computer Engineering</option>
+                                    <option value="IS">Information Science</option>
+                                    <option value="AI&DS">Artificial Intelligence And Data Science</option>
+                                </select>
+                            </h3>
+                            <br>
+                            <!-- Gender -->
+                            <h3>🚻 Gender  :
+                                <span class="gender-option">
+                                    <input type="radio" name="gender" id="male" value="Male">
+                                    <label for="male">Male</label>
+                                </span>
+                                
+                                <span class="gender-option">
+                                    <input type="radio" name="gender" id="female" value="Female">
+                                    <label for="female">Female</label>
+                                </span>
+                                
+                                <span class="gender-option">
+                                    <input type="radio" name="gender" id="other" value="Other">
+                                    <label for="other">Other</label>
+                                </span>
+                            </h3>
+                            <br>
+                            <h3>📸 Student Photo : <input type="file" name="photo" id="photo" required></h3>
+                        </fieldset>
+                        <br>
+                        <!--Marks Section--> 
+                        <fieldset id="marks">
+                            <legend><h3>Marks Information</h3></legend>
+                            <h3 style="text-align: center;"><u>Marks Of All Subject</u></h3><br>
+                            <h3>Mathematics : <input type="number" name="num" id="mnum" min="0" max="100" step="1" required> <small><em>Out of 100</em></small></h3><br>
+                            <h3>Physics : <input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3><br>
+                            <h3>C Program :<input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3><br>
+                            <h3>Web Programming :<input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3><br>
+                            <h3>English :<input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3><br>
+                            <h3>Kannada :<input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3><br>
+                            <h3>IDT :<input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3><br>
+                            <h3>Civil:<input type="number" name="num" id="mnum" min="0" max="100" required><small><em>Out of 100</em></small></h3>
+                            <br>
+                        </fieldset>
+                        <br>
+                        <hr><br>
+                        
+                        <div class="total">
+                            <h3>Total:<input type="number" name="num" id="mnum1" min="0" max="300" readonly><small><em>Out of 800</em></small></h3>
+                            <h3>Percentage:<input type="number" name="num" id="mnum1" min="0" max="300" readonly><small><em>Out of 100%</em></small></h3>
+                            
+                        </div>
+                        
+                        <br>
+                        <hr>
+                        
+                        <br>
+                        <div class="but">
+                            <button type="reset" id="re">Reset</button>
+                            <button type="submit" id="sub">Submit</button>
+                        </div>
+                        
+                        
+                    </fieldset>
+                </form>
+            </div>
+            <section id="marks-card" >
+                <h2 style="text-align: center; color: #2c3e50;">📘 Student Marks Card</h2>
+                <hr style="margin-bottom: 20px;">
+                
+                <!-- 1️⃣ Student Information -->
+                <h3 style="color: #34495e;">👤 Student Information</h3>
+                <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 20px;">
+  
+                    <!-- Student Info Table -->
+                    <table width="80%" border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse;">
+                      <tr><td><strong>👤 Name</strong></td><td id="card-name">----</td></tr>
+                      <tr><td><strong>🏫 Class</strong></td><td id="card-class">---</td></tr>
+                      <tr><td><strong>📆 Semester</strong></td><td id="card-semester">---</td></tr>
+                      <tr><td><strong>🎓 Course</strong></td><td id="card-course">---</td></tr>
+                      <tr><td><strong>🆔 USN</strong></td><td id="card-usn">---</td></tr>
+                      <tr><td><strong>🚻 Gender</strong></td><td id="card-gender">---</td></tr>
+                    </table>
+                  
+                    <!-- Student Photo -->
+                    <div style="border: 1px solid #ccc; padding: 10px;">
+                      <p style="text-align: center;"></p>
+                      <img id="card-photo" src="https://via.placeholder.com/120x150?text=Photo" alt="Student Photo" width="120" height="150" style="display: block; margin: auto; object-fit: cover; border: 1px solid #888;">
+                      <br>
+                      <p id="pusn"><small>USN</small></p>
+                    </div>
+                  
+                  </div>
+                  
+                <!-- 2️⃣ Marks and Grade Information -->
+                <h3 style="color: #34495e;">📚 Subject-wise Marks & Grades</h3>
+                <table width="100%" border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; margin-bottom: 20px; text-align: center;">
+                    <thead style="background: #ecf0f1;">
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks (Out of 100)</th>
+                            <th>🏅Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Mathematics</td><td id="mark-maths">---</td><td id="grade-maths">---</td></tr>
+                        <tr><td>Physics</td><td id="mark-physics">---</td><td id="grade-physics">---</td></tr>
+                        <tr><td>C Programming</td><td id="mark-cprog">---</td><td id="grade-cprog">---</td></tr>
+                        <tr><td>Web Programming</td><td id="mark-web">---</td><td id="grade-web">---</td></tr>
+                        <tr><td>English</td><td id="mark-eng">---</td><td id="grade-eng">---</td></tr>
+                        <tr><td>Kannada</td><td id="mark-kannada">---</td><td id="grade-kannada">---</td></tr>
+                        <tr><td>IDT</td><td id="mark-idt">---</td><td id="grade-idt">---</td></tr>
+                        <tr><td>Civil</td><td id="mark-civil">---</td><td id="grade-civil">---</td></tr>
+                    </tbody>
+                </table>
+                
+                <!-- 3️⃣ Result Summary -->
+                <h3 style="color: #34495e;">📊 Result Summary</h3>
+                <table width="100%" border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr><td><strong>📊Total Marks</strong></td><td id="card-total">---</td></tr>
+                    <tr><td><strong>📈 Percentage</strong></td><td id="card-percentage">---</td></tr>
+                    <tr><td><strong> ✅Final Result</strong></td><td id="card-result">---</td></tr>
+                    <tr><td><strong>🏅Overall Grade</strong></td><td id="card-grade">---</td></tr>
+  </table>
+  
+  <!-- 4️⃣ Suggestion / Remarks -->
+  <h3 style="color: #34495e;">📝 Suggestion / Remarks</h3>
+  <p id="card-remark" style="background: #f9f9f9; border: 1px solid #ddd; padding: 15px; border-radius: 6px; font-style: italic;">
+      Your performance will be reviewed here...
+    </p>
+    
+    <p style="text-align: center; font-size: 0.9em; color: #888; margin-top: 30px;">      
+        📌 This is a system-generated report card. No signature required.<br><br>
+        <button onclick="printMarksCard()" id="print">🖨️ Print Marks Card</button>
+    </p>
+    
+</section>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
