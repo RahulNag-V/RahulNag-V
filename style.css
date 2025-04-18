@@ -1,0 +1,152 @@
+/* Reset & Global */
+* {
+    margin: 0;
+  }
+  
+  /* Form Container */
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #5a67d8;
+    outline: none;
+  }
+  #mnum:focus{
+    border-color: #5a67d8;
+    border: 2px solid #5a67d8 ;
+    /* outline: none; */
+
+  }
+ 
+  #mnum{
+    width: 10%;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* margin-top: 5px; */
+    /* margin-bottom: 10px; */
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  /* Student Info Section */
+  #info {
+    padding: 30px;
+  }
+  
+  /* Total Section */
+  .total {
+    display: flex;
+    gap: 40px;
+  }
+  
+  /* Buttons Container */
+  .but {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Button Styles */
+  #re, 
+  #sub {
+    margin: 10px;
+    width: 50%;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Reset Button */
+  #re {
+    background-color: rgb(255, 0, 0);
+  }
+  
+  #re:hover {
+    opacity: 0.8;
+  }
+  
+  /* Submit Button */
+  #sub {
+    background-color: rgb(13, 255, 0);
+  }
+  
+  #sub:hover {
+    opacity: 0.5;
+  }
+  
+  /* Gender Option Styling */
+  .gender-option {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  /* Accent Color for Radio Buttons */
+  input[type="radio"] {
+    accent-color: gray; /* Fallback default */
+  }
+  
+  #male {
+    accent-color: blueviolet;
+    margin-left: 20px;
+  }
+  
+  #female {
+    accent-color: rgb(255, 0, 153);
+  }
+  
+  #other {
+    accent-color: black;
+  }
+  
+  /* Radio Label Styling */
+  input[type="radio"] + label {
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.2s ease;
+  }
+  
+  input[type="radio"]:checked + label {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+#print{
+    padding: 10px 20px;
+     background-color: #3498db; 
+     color: white; 
+     border: none;
+      border-radius: 6px; 
+      font-size: 16px; 
+      cursor: pointer;
+}
+ .main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #marks-card{
+      width: 40%; 
+      margin: 40px auto;
+      padding: 25px;
+      border: 2px solid black;
+      background: #ffffff; 
+      border-radius: 12px; 
+  }
+  #photo-info{
+    width: 40%;
+    height: auto;
+    background-color: #3498db;
+  }
+  #std-photo{
+    display: inline-block;
+  }
